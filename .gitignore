@@ -1,0 +1,24 @@
+# Entornos virtuales
+venv/
+.venv/
+
+# Archivos de PyCharm / JetBrains
+.idea/
+*.iml
+
+# Archivos del sistema
+.DS_Store
+
+# Archivos Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Datos grandes
+data/*.csv
+data/*.parquet
+data/*.json
+
+# Logs
+*.log
