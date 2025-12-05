@@ -4,6 +4,10 @@ Flask + Bootstrap | Exploratory Data Analysis | Gráficos interactivos
 Este proyecto implementa un dashboard web para explorar datos del NYC Taxi Dataset.
 Está construido con Python, Flask y Bootstrap, e incluye visualizaciones procesadas previamente en Python.
 
+## 🖼 Vista del Dashboard
+
+![NYC Taxi Dashboard](images/dashboard.png)
+
 #Características principales:
 
 -Dashboard web con interfaz limpia y responsive
@@ -30,6 +34,27 @@ nyc_taxi_eda_dashboard/
 ├── app.py                       # Aplicación Flask
 ├── requirements.txt             # Dependencias del proyecto
 └── .gitignore                   # Archivos ignorados por Git
+
+## 🧠 Arquitectura del proyecto 
+
+```mermaid
+flowchart TB
+    A["Usuario"] --> B["Navegador Web"]
+    B --> C["Flask App - app.py"]
+
+    C --> D["Lectura del Dataset<br/>data/nyc_taxi.csv"]
+    C --> E["Procesamiento de datos<br/>(Pandas)"]
+
+    E --> F["Renderización con Template"]
+    F --> G["dashboard.html<br/>(templates/)"]
+    G --> B
+
+    C --> H["Requerimientos<br/>requirements.txt"]
+    C --> I["Recursos del proyecto<br/>.gitignore"]
+
+    B --> J["Dashboard final<br/>images/dashboard.png"]
+```
+
 
 ▶️ Cómo ejecutar el proyecto:
 
